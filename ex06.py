@@ -24,8 +24,18 @@ dag = DAG(
     'lesson1.exercise6',
     start_date=datetime.datetime.now()
 )
+
 # Setup Postgres operator
 # Need to go to Airflow and create Redshift connection
+# ConnId = redshift
+# Conn Type= Postgres
+# Host = Redshitf cluster link
+# Schema = Database Name
+# Login = awsuser
+# Password = 12a12s123dD
+# Port=5439
+#
+
 create_table = PostgresOperator(
     task_id="create_table",
     dag=dag,
