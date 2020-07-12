@@ -26,6 +26,7 @@ dag = DAG(
 )
 
 # Setup Postgres operator
+# Cluster need to be publicly check network security for enable VPC
 # Need to go to Airflow and create Redshift connection
 # ConnId = redshift
 # Conn Type= Postgres
