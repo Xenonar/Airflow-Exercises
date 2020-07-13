@@ -104,5 +104,12 @@ create_city_station_counts_task=PostgresOperator(
     postgres_conn_id="redshift"
 )
 
+# Configure the task dependencies:
+#
+#   create_oldest ->  log_oldest 
+#   create_youngest -> log_youngest
+#   lifetime_rides   
+#   city_station_counts
+
 create_oldest_task >> log_oldest_task
 create_youngest_task >> log_youngest_task
